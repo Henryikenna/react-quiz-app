@@ -1,0 +1,102 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+
+
+.f-main{
+  width: 75%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #020230), url("./assets/bg.jpg") center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.moneyList li{
+  @apply flex items-center p-[5px] rounded-[5px];
+}
+
+.moneyList li span:nth-child(1){
+  width: 30%;
+}
+
+.moneyList .active{
+  background-color: teal;
+}
+
+.answers div{
+  width: 40%;
+  @apply p-3 text-center bg-gradient-to-b from-[#0e0124] to-[#22074d] border border-white rounded-[15px] text-xl font-light cursor-pointer;
+}
+
+.answers div:hover, .answers .active{
+  background: mediumblue;
+}
+
+.answers .correct{
+  animation: correct 3s ease forwards;
+}
+.answers .wrong{
+  animation: wrong 3s ease forwards;
+}
+
+@keyframes correct {
+  0%, 22%, 42%{
+    background: mediumblue;
+  }
+  20%, 40%, 60%{
+    @apply bg-gradient-to-b from-[#0e0124] to-[#22074d];
+  }
+  62%, 100%{
+    background: green;
+  }
+}
+@keyframes wrong {
+  0%, 22%, 42%{
+    background: mediumblue;
+  }
+  20%, 40%, 60%{
+    @apply bg-gradient-to-b from-[#0e0124] to-[#22074d];
+  }
+  62%, 100%{
+    background: crimson;
+  }
+}
